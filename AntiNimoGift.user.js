@@ -3,7 +3,7 @@
 // @namespace    http://facebook.com/q2theb
 // @version      0.1
 // @description  Xóa quà tặng bay bay trên khung chat
-// @author       You
+// @author       Bao
 // @match        https://*.nimo.tv/*
 // @icon         https://www.google.com/s2/favicons?domain=nimo.tv
 // @grant        none
