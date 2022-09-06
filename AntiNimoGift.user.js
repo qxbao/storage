@@ -1,21 +1,21 @@
 // ==UserScript==
-// @name         AntiNimoGift
-// @namespace    http://facebook.com/q2theb
-// @version      0.1
-// @description  Xóa quà tặng bay bay trên khung chat
-// @author       Bao
-// @match        https://*.nimo.tv/*
-// @icon         https://www.google.com/s2/favicons?domain=nimo.tv
+// @name         Nimo Janitor
+// @namespace    https://www.facebook.com/q2theb/
+// @version      1.0
+// @description  Dọn sạch phần tử không cần thiết khỏi nimo
+// @author       Orca
+// @match        https://www.nimo.tv/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=nimo.tv
 // @grant        none
-// @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+// @require https://code.jquery.com/jquery-3.6.1.min.js
 // ==/UserScript==
 
-(function(){
+(function() {
     'use strict';
-    var t=[];
-    t.push($('.nimo-gift-banner.n-as-abs.n-as-of-hidden.n-as-no-evt.n-fx-col.n-fx-sn.n-as-padh.n-as-bd-box'));
-    t.push($(".n-as-abs.chat-room__enter_banner.n-as-w100"));
-    var rem=(x)=>{for(let i=0;i<x.length;i++){for(let y=0;i<x[i].length;i++){x[i][y].remove();}}};
-    rem(t);
-    console.log("done")
+    const element = ['.nimo-svga-gift', '.chatroomShareComp-container', '.UserEnterRoomMessageItem', '.nimo-theme-dark.page-mini-panels', '.rich-text-container', '.movePannel', '.n-as-mrgh', '.nimo-gift-banner', '.nimo-room__chatroom__box-gift', '.nimo-room__chatroom__message-item'];
+    setInterval(() => {
+        for (let e of element) {
+            $(e).css('display', 'none');
+        }
+    }, 500)
 })();
